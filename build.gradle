@@ -1128,8 +1128,8 @@ mkdocs {
 
 sonarqube {
   properties {
-    property "sonar.projectKey", "damien-rembert_omegat"
-    property "sonar.organization", "damien-rembert-all"
+    property "sonar.projectKey", "omegat-sonar_omegat"
+    property "sonar.organization", "omegat-sonar"
     property "sonar.host.url", "https://sonarcloud.io"
     property "sonar.java.spotbugs.reportPaths", "build/reports/spotbugs/*.xmll"
     property "sonar.java.checkstyle.reportPaths", "build/reports/checkstyle/*.xml"
