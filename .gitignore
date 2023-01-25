@@ -17,5 +17,5 @@ local.properties
 # emacs backup files
 *~
 
-# MacOS system files
+# MacOS system file
 .DS_Store

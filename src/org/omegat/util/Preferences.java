@@ -221,6 +221,8 @@ public final class Preferences {
 
     /** Workflow Option: Don't Insert Source Text Into Translated Segment */
     public static final String DONT_INSERT_SOURCE_TEXT = "wf_noSourceText";
+    // false: insert source / true: empty
+
     /** Workflow Option: Allow translation to be equal to source */
     public static final String ALLOW_TRANS_EQUAL_TO_SRC = "wf_allowTransEqualToSrc";
     /** Workflow Option: Insert Best Match Into Translated Segment */
@@ -231,7 +233,7 @@ public final class Preferences {
      * Default Value of Workflow Option: Minimal Similarity Of the Best Fuzzy
      * Match to insert
      */
-    public static final int BEST_MATCH_MINIMAL_SIMILARITY_DEFAULT = 80;
+    public static final int BEST_MATCH_MINIMAL_SIMILARITY_DEFAULT = 100;
 
     /**
      * When a fuzzy match is displayed from a memory belonging to a language other
@@ -402,7 +404,7 @@ public final class Preferences {
     public static final String FILTERS_VERSION = "filters_version";
 
     public static final String LT_DISABLED = "lt_disabled";
-    public static final boolean LT_DISABLED_DEFAULT = true;
+    public static final boolean LT_DISABLED_DEFAULT = false;
 
     public static final String LOOSE_TAG_ORDERING = "loose_tag_ordering";
 
@@ -455,10 +457,6 @@ public final class Preferences {
 
     /** status bar progress mode */
     public static final String SB_PROGRESS_MODE = "sb_progress_mode";
-
-    /** TaaS glossary client.*/
-    public static final String TAAS_LOOKUP = "taas_lookup";
-    public static final String TAAS_DOMAIN = "taas_domain";
 
     /** Segment Properties Area preferences */
     public static final String SEGPROPS_INITIAL_MODE = "segment_properties_initial_mode";
