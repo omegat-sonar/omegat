@@ -2,7 +2,7 @@
 <!DOCTYPE section PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
 "../../../docbook-xml-4.5/docbookx.dtd">
 <section id="how.to.use.team.project">
-  <title id="how.to.use.team.project.title">Use a Team Project</title>
+  <title id="how.to.use.team.project.title">Use a team project</title>
 
   <para>Team projects use synchronization mechanisms between project members.</para>
 
@@ -28,7 +28,7 @@
   members have to select the appropriate translation.</para>
 
   <para>Members can take turns translating and reviewing the files. The Search
-  function allows them to filter the editor pane on contents translated by a
+  function allows them to filter the Editor pane on contents translated by a
   given person, or on contents translated after or before a given time,
   for example.</para>
   
@@ -82,6 +82,9 @@
 		  SSH configuration to include that server before attempting to download
 		  the project, otherwise you will get an authentication error and the
 		  project will fail to load.</para>
+
+		  <para>If you use multiple projects on the same server, credentials
+		  will only be asked once for that server.</para>
 		</note>
 	  </listitem>
 	</varlistentry>

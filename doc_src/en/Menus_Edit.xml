@@ -161,7 +161,7 @@
       <listitem>
         <para>Exports the current selection to a text file for processing. If no
         text has been selected, the current source segment is written to this
-        file. To remain consistent with usual clipboard behavior this file is
+        file. To remain consistent with usual clipboard behaviour this file is
         not emptied when the user exits OmegaT. The exported contents are copied
         to the <link
         linkend="configuration.folder.default.contents.script.selection.title"
@@ -318,6 +318,12 @@
 		  <listitem>
 			<para><guimenuitem>Cycle</guimenuitem>
 			<keycombo><keycap>S</keycap><keycap>F3</keycap></keycombo></para>
+			<warning>
+			  <para>On macOS, the <keycombo><keycap>F3</keycap></keycombo> key 
+			  enables the <emphasis role="bold">overwrite</emphasis> mode in the
+			  editor. See <link linkend="panes.editor.overwriting"
+			  endterm="panes.editor.overwriting.title"/> for details.</para>
+			</warning>
 		  </listitem>
 		</itemizedlist>
 	  </listitem>
