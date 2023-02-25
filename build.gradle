@@ -222,7 +222,7 @@ dependencies {
     testRuntimeOnly "org.languagetool:language-pl:${languageToolVersion}"
 
     // JAXB codegen only
-    jaxb 'com.sun.xml.bind:jaxb-xjc:2.3.4'
+    jaxb 'com.sun.xml.bind:jaxb-xjc:4.0.2'
 
     testIntegrationImplementation sourceSets.main.output, sourceSets.test.output
 }
