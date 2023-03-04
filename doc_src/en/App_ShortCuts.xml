@@ -91,8 +91,9 @@
     <link linkend="menus.project" endterm="menus.project.title"/>, <link
     linkend="menus.edit" endterm="menus.edit.title"/>, and <link
     linkend="menus.goto" endterm="menus.goto.title"/> menus and to a number of
-    functions in the Editor window. You can also add or modify the shortcuts for
-    most of the functions.</para>
+    functions in the <link linkend="panes.editor" endterm="panes.editor.title"/>
+    pane. You can also add or modify the shortcuts for most of the
+    functions.</para>
 
 	<para>To do so, you have to put the appropriate shortcut definition file in
 	your OmegaT configuration folder. See the <link
@@ -655,6 +656,7 @@
             <row>
               <entry>Search Dictionaries</entry>
               <entry>editSearchDictionaryMenuItem</entry>
+              <entry namest="3" nameend="4">alt shift D</entry>
             </row>
 
             <row>
@@ -853,11 +855,15 @@
             <row>
               <entry>Next Note</entry>
               <entry>gotoNextNoteMenuItem</entry>
+              <entry>ctrl alt N</entry>
+              <entry>meta alt N</entry>
             </row>
 
             <row>
               <entry>Previous Note</entry>
               <entry>gotoPreviousNoteMenuItem</entry>
+              <entry>ctrl alt P</entry>
+              <entry>meta alt P</entry>
             </row>
 
             <row>
@@ -919,15 +925,15 @@
             <row>
               <entry>Notes Pane</entry>
               <entry>gotoNotesPanelMenuItem</entry>
-              <entry>ctrl alt N</entry>
-              <entry>meta alt N</entry>
+              <entry>ctrl alt 9</entry>
+              <entry>meta alt 9</entry>
             </row>
 
             <row>
               <entry>Editor Pane</entry>
               <entry>gotoEditorPanelMenuItem</entry>
-              <entry>ctrl alt E</entry>
-              <entry>meta alt E</entry>
+              <entry>ctrl alt 0</entry>
+              <entry>meta alt 0</entry>
             </row>
 
           </tbody>
@@ -1335,12 +1341,6 @@
               <entry>editorSelectAll</entry>
               <entry>ctrl A</entry>
               <entry>meta A</entry>
-            </row>
-
-            <row>
-              <entry>Switch RtL/LtR Orientation</entry>
-              <entry>editorSwitchOrientation</entry>
-              <entry namest="3" nameend="4">ctrl shift O</entry>
             </row>
 
             <row>

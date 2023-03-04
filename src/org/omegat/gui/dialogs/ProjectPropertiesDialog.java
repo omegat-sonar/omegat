@@ -31,15 +31,13 @@
 package org.omegat.gui.dialogs;
 
 import java.awt.BorderLayout;
-import java.awt.FlowLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Font;
+import java.awt.FlowLayout;
 import java.awt.Frame;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
-import java.awt.Label;
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -68,6 +66,8 @@ import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.EtchedBorder;
 
+import org.openide.awt.Mnemonics;
+
 import org.omegat.CLIParameters;
 import org.omegat.core.Core;
 import org.omegat.core.data.CommandVarExpansion;
@@ -90,7 +90,6 @@ import org.omegat.util.gui.LanguageComboBoxRenderer;
 import org.omegat.util.gui.OmegaTFileChooser;
 import org.omegat.util.gui.StaticUIUtils;
 import org.omegat.util.gui.TokenizerComboBoxRenderer;
-import org.openide.awt.Mnemonics;
 
 import gen.core.filters.Filters;
 import gen.core.project.RepositoryDefinition;
@@ -183,15 +182,6 @@ public class ProjectPropertiesDialog extends JDialog {
         centerBox.setBackground(getBackground());
         centerBox.setOpaque(true);
         centerBox.setBorder(new EmptyBorder(5, 5, 5, 5));
-
-        // hinting message
-        JTextArea messageArea = new JTextArea();
-        messageArea.setEditable(false);
-        messageArea.setOpaque(false);
-        messageArea.setFont(new Label().getFont());
-        messageArea.setLineWrap(true);
-        messageArea.setWrapStyleWord(true);
-        messageArea.setBorder(new EmptyBorder(5, 5, 5, 5));
 
         // Source and target languages and tokenizers
         Box localesBox = Box.createHorizontalBox();
@@ -812,7 +802,7 @@ public class ProjectPropertiesDialog extends JDialog {
 
         // Pack once to get the width...
         pack();
-        updateUIText(messageArea);
+        updateUIText();
         // Then again to expand the height to accomodate the message.
         // This is needed because the height isn't known until the
         // amount of linewrapping is known.
@@ -1216,20 +1206,16 @@ public class ProjectPropertiesDialog extends JDialog {
         setVisible(false);
     }
 
-    private void updateUIText(JTextArea messageArea) {
+    private void updateUIText() {
         switch (dialogType) {
         case NEW_PROJECT:
             setTitle(OStrings.getString("PP_CREATE_PROJ"));
-            messageArea.setText(OStrings.getString("PP_MESSAGE_CONFIGPROJ"));
             break;
         case RESOLVE_DIRS:
             setTitle(OStrings.getString("PP_OPEN_PROJ"));
-            messageArea.setText(OStrings.getString("PP_MESSAGE_BADPROJ"));
-            messageArea.setFont(messageArea.getFont().deriveFont(Font.BOLD));
             break;
         case EDIT_PROJECT:
             setTitle(OStrings.getString("PP_EDIT_PROJECT"));
-            messageArea.setText(OStrings.getString("PP_MESSAGE_EDITPROJ"));
             break;
         }
     }
