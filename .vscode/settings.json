@@ -1,0 +1,7 @@
+{
+	"java.configuration.updateBuildConfiguration": "automatic",
+	"java.format.settings.url": "docs_devel/docs/assets/eclipse-formatting.xml",
+	"editor.formatOnSave": true,
+	"editor.formatOnSaveMode": "modificationsIfAvailable",
+	"editor.formatOnPaste": true,
+}
