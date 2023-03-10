@@ -12,8 +12,9 @@ plugins {
     id 'com.github.spotbugs' version '4.7.10'
     id 'org.hidetake.ssh' version '2.10.1'
     id 'com.diffplug.spotless' version '6.0.0'
-    id 'com.github.ben-manes.versions' version '0.39.0'
+    id 'com.github.ben-manes.versions' version '0.46.0'
     id 'ru.vyarus.mkdocs' version '3.0.0'
+    id "org.sonarqube" version "3.5.0.2730"
 }
 
 apply from: 'gradle/utils.gradle'
@@ -824,7 +825,7 @@ allprojects {
 }
 
 spotbugs {
-    reportLevel = 'high'
+    // reportLevel = 'high'
 }
 
 tasks.findAll { it.name =~ /^spotbugs.*/ }.each {
@@ -1143,6 +1144,18 @@ task publishVersion {
 python.docker.use = true
 mkdocs {
     sourcesDir = 'docs_devel'
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "omegat-sonar_omegat"
+    property "sonar.organization", "omegat-sonar"
+    property "sonar.host.url", "https://sonarcloud.io"
+    property "sonar.java.spotbugs.reportPaths", "build/reports/spotbugs/*.xmll"
+    property "sonar.java.checkstyle.reportPaths", "build/reports/checkstyle/*.xml"
+    property "sonar.coverage.jacoco.xmlReportPaths", "build/reports/jacoco/test/jacocoTestReport.xml"
+    property "sonar.java.source", "8"
+  }
 }
 
 // Allow setting the max heap size for the run task from the command line, e.g.
